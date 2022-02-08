@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --Very-Dark-Blue: #070439;
+  --Desaturated-Blue: #585989;
+
+  --Bright-Blue: #3065f8;
+  --Moderate-Cyan: #3c9f8f;
+
+  --Light-Grayish-Blue: #f6f6fe;
+  --Light-Gray: #bfbfbf;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+button {
+  font-family: 'Raleway', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding-inline: 8rem;
+}
+
+/* ---------------- */
+/* Navbar */
+/* ---------------- */
+
+.nav__header {
+  background-color: #fff;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6.5rem;
+  padding-bottom: 8.6rem;
+}
+
+.nav__links {
+  display: flex;
+}
+
+.nav__links li:not(:last-child) {
+  margin-right: 5.7rem;
+}
+
+.nav__link {
+  color: var(--Very-Dark-Blue);
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- */
+/* Hero */
+/* ---------------- */
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16.4rem;
+}
+
+.hero__image {
+  max-width: 64rem;
+}
+
+.hero__text h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 6rem;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 1.5rem;
+}
+
+.hero__text p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--Very-Dark-Blue);
+  line-height: 2.4rem;
+  letter-spacing: 0.53px;
+  margin-bottom: 2.4rem;
+}
+
+#email {
+  border: 0.625px solid var(--Very-Dark-Blue);
+  box-shadow: 2px 3px 6px rgb(0, 0, 0, 0.15);
+  border-radius: 3.5px;
+  width: 32rem;
+  height: 4.5rem;
+  padding-left: 2.1rem;
+  margin-right: 1.6rem;
+}
+
+.subscribe {
+  display: flex;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+#email::placeholder {
+  color: #c2c2c2;
+  font-size: 1.4rem;
+}
+
+.form-control.error #email {
+  border-color: #e74c3c;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.subscribe small {
+  color: #ef4877;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  visibility: hidden;
+}
+
+.subscribe-btn {
+  display: inline-block;
+  background-color: var(--Bright-Blue);
+  color: #fff;
+  border: none;
+  box-shadow: 2px 3px 6px rgb(0, 0, 0, 0.15);
+  border-radius: 3.5px;
+  padding: 1.46rem 6.1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #6c9bff;
+}
+
+/* ---------------- */
+/* About */
+/* ---------------- */
+
+.about {
+  background: url('../images/bg-curve-desktop.svg') no-repeat center/cover;
+  padding-block: 17rem;
+}
+
+.about .container {
+  display: flex;
+  align-items: center;
+  gap: 9rem;
+}
+
+.about__text h2 {
+  font-size: 4rem;
+  line-height: 4.6rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 3.8rem;
+}
+
+.about__text p {
+  color: var(--Very-Dark-Blue);
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.about__image {
+  max-width: 54rem;
+}
+
+.about__text .btn {
+  display: flex;
+  align-items: center;
+  color: var(--Moderate-Cyan);
+  line-height: 2.1rem;
+  border-bottom: 1px solid var(--Moderate-Cyan);
+  width: 17rem;
+}
+
+.about__text .btn span {
+  margin-left: 0.2rem;
+}
+
+.testimonial__box {
+  margin-top: 4.5rem;
+  background-color: #fff;
+  max-width: 36rem;
+  box-shadow: 0 0 10px 5px rgb(56, 56, 56, 0.05);
+  border-radius: 5px;
+  padding: 1.8rem 3.3rem;
+}
+
+.testimonial__box p {
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.5px;
+  margin-block: 1.6rem;
+}
+
+.client__box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  line-height: 0;
+}
+
+.client__box p {
+  margin-block: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Blue);
+  line-height: 1.5rem;
+  letter-spacing: 0.55px;
+}
+
+.client__box small {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.4px;
+  color: var(--Very-Dark-Blue);
+}
+
+.client__box img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+}
+
+/* ---------------- */
+/* CTA Banner */
+/* ---------------- */
+
+.cta__banner {
+  background-color: var(--Desaturated-Blue);
+  padding-top: 10rem;
+  padding-bottom: 8.5rem;
+}
+
+.cta__banner .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta__text h3 {
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  color: #fff;
+  margin-bottom: 1.7rem;
+}
+
+.cta__text p {
+  line-height: 2.4rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+  max-width: 53rem;
+}
+
+.cta__form-box {
+  max-width: 48rem;
+}
+
+.cta__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+#cta__email {
+  width: 48rem;
+  height: 4.8rem;
+  border-radius: 3.5px;
+  border: none;
+  box-shadow: 2px 3px 6px rgb(7, 4, 59, 0.15);
+}
+
+#cta__email::placeholder {
+  color: #c0c0c0;
+  padding-left: 2.2rem;
+  font-size: 1.2rem;
+}
+
+.cta__form .subscribe-btn {
+  max-width: 20rem;
+  padding: 1.6rem 2.2rem;
+}
+
+/* ---------------- */
+/* Footer */
+/* ---------------- */
+
+.footer {
+  background-color: var(--Very-Dark-Blue);
+  padding-block: 9rem;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22rem;
+
+  color: #fff;
+}
+
+.footer__logo {
+  width: 22rem;
+}
+
+.contact__box {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact__box:nth-of-type(1) {
+  margin-top: 3.5rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.footer__link {
+  color: #fff;
+
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: #6c9bff;
+}
+
+.social__link {
+  border: 1px solid #dfe4f0;
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  color: #fff;
+
+  transition: color 0.3s;
+}
+
+.social__link:hover {
+  color: #6c9bff;
+}
+
+.social__link:not(:last-child) {
+  margin-right: 0.8rem;
+}
+
+/* ---------------- */
+/* Mobile */
+/* ---------------- */
+
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 400px;
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+  }
+
+  .navbar {
+    padding-top: 2.4rem;
+  }
+
+  .nav__links li:not(:last-child) {
+    margin-right: 2.4rem;
+  }
+
+  .nav__link {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .logo {
+    width: 8rem;
+  }
+
+  .hero__image {
+    width: 30rem;
+    margin-bottom: 4rem;
+  }
+
+  .hero__text {
+    text-align: center;
+  }
+
+  .hero__text h1 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  .hero__text p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    max-width: 30rem;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+
+  #email {
+    width: 30rem;
+    margin-right: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  .subscribe-btn {
+    width: 100%;
+  }
+
+  .about {
+    background: url('../images/bg-curve-mobile.svg') no-repeat center/cover;
+    padding-block: 9rem;
+  }
+
+  .about .container {
+    flex-direction: column-reverse;
+  }
+
+  .about__text {
+    text-align: center;
+  }
+
+  .about__text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about__text p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+
+  .about__text .btn {
+    text-align: center;
+    width: 13rem;
+    font-size: 1.2rem;
+    margin-top: 3.6rem;
+  }
+
+  .testimonial__box {
+    text-align: start;
+  }
+
+  .testimonial__box p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.38px;
+  }
+
+  .cta__banner {
+    padding-top: 5.4rem;
+  }
+
+  .cta__banner .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta__text h3 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .cta__text p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    margin-bottom: 2.4rem;
+  }
+
+  #cta__email {
+    width: 100%;
+  }
+
+  .cta__form .subscribe-btn {
+    font-size: 1rem;
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  .social__links {
+    text-align: center;
+  }
+}
